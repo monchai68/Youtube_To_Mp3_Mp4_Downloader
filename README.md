@@ -21,6 +21,13 @@ A simple GUI application to download MP3 audio or MP4 video from YouTube videos,
 
 ## Installation
 
+### Option 1: Use Pre-built Executable (Recommended)
+
+1. **Download the executable**: `YouTube_Downloader.exe` from the `dist` folder
+2. **Double-click** to run - no installation required!
+
+### Option 2: Run from Source Code
+
 1. **Clone or download this repository**
 
 2. **Install Python dependencies**:
@@ -47,6 +54,12 @@ A simple GUI application to download MP3 audio or MP4 video from YouTube videos,
    ```
 
 ## Usage
+
+### Using the Executable
+
+1. **Double-click** `YouTube_Downloader.exe` or use `run_exe.bat`
+
+### Using Source Code
 
 1. **Run the application**:
    ```bash
@@ -97,6 +110,32 @@ A simple GUI application to download MP3 audio or MP4 video from YouTube videos,
 - This is usually due to YouTube's rate limiting
 - Try downloading during off-peak hours
 - Consider reducing the quality setting
+
+## Building Executable
+
+If you want to create your own executable:
+
+### Quick Build
+```bash
+# Run the build script
+build_exe.bat
+```
+
+### Manual Build
+```bash
+# Install PyInstaller
+pip install pyinstaller
+
+# Build executable
+pyinstaller --onefile --noconsole --name="YouTube_Downloader" YouToMp3.py
+```
+
+The executable will be created in the `dist` folder.
+
+### Files Created
+- `YouTube_Downloader.exe` - Main executable (~18MB)
+- `build/` - Build files (can be deleted)
+- `YouTube_Downloader.spec` - PyInstaller specification
 
 ## License
 
